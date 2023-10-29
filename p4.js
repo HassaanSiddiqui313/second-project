@@ -4,10 +4,30 @@ const scroll= new LocomotiveScroll({
 })
 
 
+// circle ko move krte waqt ovel bnane k lia code
+function circletooval() {
+    let xscale= 1;
+    let yscale=1;
+    
+    let xprev=0;
+    let yprev=0;
+    
+    window.addEventListener(`mousemove`,function (dets) {
+        let xdiff = dets.clientX - xprev;
+        let ydiff = dets.clientY - yprev;
+
+        xscale=gsap.utils.clamp(0.8,1.2,xdiff);
+        yscale=gsap.utils.clamp(0.8,1,ydiff);
+
+        xprev=dets.clientX;
+        yprev=dets.clientY;
+        circleMouseFollower(xscale,yscale)
+    })
+}
 
 //cursor following dot
 
-function circleMouseFollower() {
+function circleMouseFollower(xscale, yscale) {
     const cursorFollower = document.querySelector(".cursorfollower");
 
     // Function to show the cursor follower
@@ -28,7 +48,7 @@ function circleMouseFollower() {
 
     // Add event listener to move and scale the cursor follower on mousemove
     document.addEventListener("mousemove", function (dets) {
-        cursorFollower.style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) `;
+        cursorFollower.style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(${xscale}, ${yscale})`;
     });
 }
 
