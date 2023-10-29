@@ -1,0 +1,322 @@
+@font-face{
+    font-family: "General Sans Medium"; 
+    src: url('GeneralSans-Medium.otf'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+@font-face{
+    font-family: "General Sans"; 
+    src: url('GeneralSans-Regular.otf'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:"General Sans";
+    line-height: 1;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+/* animating down to up elements */
+.downtoupanim{
+    width: fit-content;
+    overflow: hidden;
+}
+
+/* animating up to down elements */
+.uptodownanim{
+    width: fit-content;
+    overflow: hidden;
+}
+
+
+
+/* styling cursor following circle */
+.cursorfollower{
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 110;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-100%, -100%);
+    transition: transform .5s cubic-bezier(0.19, 1, 0.22, 1);
+    will-change: transform;
+}
+
+/* to make nav sticky */
+nav{
+    position:   sticky;
+    top: 0;
+    z-index: 10000;
+    background-color: black;
+}
+/* nav styling */
+#nav ul{
+    padding: 36px 45px;
+}
+#nav1{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+/* border so that on hover page do not get disturbed */
+#nav2{
+    border-bottom: 2px solid black;
+}
+#nav1 a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+/* for animation of nav */
+#nav2:hover{
+    border-bottom: 2px solid #afafaf;
+    transition: all 0.8s ;
+}
+/* adjusting canvous of main */
+#main{
+    padding: 5vh 5vh;
+    margin-top: 40px;
+    height: 70vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+/* main section 1 */
+#main1{
+    padding-left: 15px;
+    width: 50vw;
+    font-size: 9.9vw;
+    color: #afafaf;
+}
+#main1-2{
+    margin-left: 11.5vw;
+}
+#main2{
+    margin-left: 51.45vw;   
+}
+/* main section 2 */
+#mains2{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    gap: 2.5vh;
+    margin-top: 100px;
+}
+
+/* main section 3 */
+#mains3{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 8vh;
+    padding: 0vh 5vh;
+}
+/* marking sections cursor pointer */
+#mains3-2{
+    cursor: pointer;
+    border-bottom: 2px solid black;
+}
+#mains3-1{
+    cursor: pointer;
+    border-bottom: 2px solid black;
+}
+/*hover: rotating and giving style on hover */
+#mains3-1:hover,#mains3-2:hover{
+    border-bottom: 2px solid #afafaf;
+    transition: all 0.8s ;
+    .mains3-1c{
+        transform: rotate(0deg);
+        display: inline-block;
+    }
+}
+/* rotating arrows */
+.mains3-1c {
+    transform: rotate(-45deg);
+    display: inline-block;
+}
+/* button styling */
+.s3button1,.s3button2{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: rotate(90deg);
+    border: none;
+    width: 25px;
+    height: 25px;
+    margin: 0.15vw;
+    background-color: #afafaf;
+    overflow: hidden;
+    
+}
+#mains3-3{
+    cursor:default;
+}
+.s3buttonin1-2,.s3buttonin2-2{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.s3buttonin1-1,.s3buttonin2-1{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+/* styling second view */
+#secondview{
+    margin-top: 35vh;
+    padding-left: 2.5vw;
+    padding-right: 9vw;
+}
+/* flexing and styling  second view */
+#secondmain-1,#secondmain-2,#secondmain-3{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-content: center;
+    height: 33vh;
+    border-top: 1px solid #afafaf;
+    color: #afafaf;
+    cursor: pointer;
+}
+#secondmain-3{
+    border-bottom: 1px solid #afafaf;
+}
+/* styling second view headings */
+.secondviewh1{
+    font-size: 15vh;
+}
+/* second view hover */
+#secondmain-1:hover,#secondmain-2:hover,#secondmain-3:hover{
+    padding-left: 3vw;
+    color: #363636;
+    transition:all .5s ease-in-out ;
+}
+/* making year center */
+.secondmaincls div{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;  
+}
+/* third view styling */
+#thirdviews1{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30vh;
+    gap: 80px;   
+    font-family: "General Sans Medium";
+}
+/* img padding */
+img{
+    width: 15vw;
+    height: 15vw;
+}
+/* adjusting "about me" section */
+#aboutmetext{
+    width: 600px;
+    font-size: 19px;
+    padding-right: 9vw;
+}
+/* About me paragraph styling */
+#aboutmetext h6{
+    color: #afafaf;
+}
+#aboutmetext p{
+    line-height: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* "Let's talk" button styling */
+#aboutmetext button{
+    width: 7vw;
+    height: 4.5vh;
+    font-size: 15px;
+    background-color: black;
+    color: #fff;
+    border: #fff 1px solid;
+    border-radius: 30px;
+    cursor: pointer;
+}
+/* button hover */
+#aboutmetext button:hover{
+    background-color: #fff;
+    color: black;
+    transition: background-color .5s ease-in-out;
+}
+
+/* youtube link styling */
+#thirdviews2{
+    padding-top: 20vh;
+    margin-left: 3vw;
+}
+#thirdviews2 h5{
+    margin-bottom: 15px;
+    color: #afafaf;
+}
+#thirdviews2 div a{
+    text-decoration: none;
+    color: #fff;
+}
+/* rotatin arrow */
+#thirdviews2 div span{
+    display: inline-block;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+/* hover on youtube link */
+#thirdviews2 div{
+    border-bottom: black 1px solid;
+    display: inline-block;
+}
+#thirdviews2 div:hover{
+    border-bottom: #fff 1px solid;
+    transition: all 0.8s ;
+    #ytarrow{
+        transform: rotate(0deg);
+    }
+}
+/* footer styling */
+footer{
+    margin-top: 20vh;
+    padding-bottom: 3vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    display: flex;
+    justify-content: space-between;
+    height: 22vh;
+}
+/* social media links styling */
+#footer2 {
+    display: flex;
+    gap: 3vw;
+}
+#footer2 a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    border-bottom: black 1px solid;
+}
+#footer2 a:hover{
+    border-bottom: white 1px solid;
+    transition: all 0.8s ;
+}
