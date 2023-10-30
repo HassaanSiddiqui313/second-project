@@ -48,7 +48,7 @@ function circleMouseFollower(xscale, yscale) {
 
     // Add event listener to move and scale the cursor follower on mousemove
     document.addEventListener("mousemove", function (dets) {
-        cursorFollower.style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(${xscale}, ${yscale})`;
+        cursorFollower.style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`;
     });
 }
 
