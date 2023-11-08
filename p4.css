@@ -45,7 +45,7 @@ html,body{
     height: 13px;
     background-color: white;
     border-radius: 50%;
-    z-index: 110;
+    z-index: 11000;
     position: absolute;
     pointer-events: none;
     transform: translate(-100%, -100%);
