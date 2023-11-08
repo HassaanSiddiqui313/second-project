@@ -55,7 +55,7 @@ html,body{
 
 /* to make nav sticky */
 nav{
-    position:   sticky;
+    position:   relative;
     top: 0;
     z-index: 10000;
     background-color: black;
